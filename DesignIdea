@@ -1,0 +1,63 @@
+1. Dragon
+	- Passive 1: Instant Death
+		Description: Instantly kills an enemy target if its HP is below 5%.
+		Cooldown: 3 turns.
+		Cost: None.
+	- Passive 2: Roar of Death
+		Description: Increases PD by 50% once per battle when own HP is below 50%.
+		Cooldown: None.
+		Cost: None.
+	- Active: Wrath of Fire
+		Description: Deals 150% PD to the enemy target with the lowest health, applying BURN effect to that target.
+		Cooldown: None.
+		Cost: 100 MP.
+			BURN effect: Deals 5% target's HP.
+			Duration: 2 turns.
+			Stackable: Yes.
+			
+2. Hydra
+	- Passive 1: Poisonous Touch
+		Description: Each attack inflicts a POISON effect on the target.
+		Cooldown: None.
+		Cost: None.
+			POISON effect: Deals 1% current MD to the target.
+			Duration: 2 turns.
+			Stackable: Yes.
+	- Passive 2: Backstabber
+		Description: Always choose the enemy with the lowest MR.
+		Cooldown: None.
+		Cost: None.
+	- Active: Dirty Playing
+		Description: Deals 75% MD to all enemies.
+		Cooldown: None.
+		Cost: 100 MP.
+	
+3. Phoenix
+	- Passive 1: Glorious Rise
+		Description: When dying for the first time, revives with 50% HP.
+		Cooldown: Int.MaxValue turns.
+		Cost: None.
+	- Passive 2: Guidance Of Fire
+		Description: Increases MD by 30% when an ally has less than 50% HP.
+		Cooldown: 3 turns.
+		Cost: None.
+	- Active: Talented Strategist
+		Description: Deals 200% MD to the target.
+		Cooldown: None.
+		Cost: 100 MP.
+
+4. Qilin
+	- Passive 1: Encouraging Dance
+		Description: Increases MR of an ally with the lowest HP by 25% of own MR.
+		Cooldown: 2 turns.
+		Cost: None.
+	- Passive 2: Celebrate Together
+		Description: 
+
+5. Rabbit
+
+6. Unicorn
+
+7. Wolf
+
+8. Wyvern
