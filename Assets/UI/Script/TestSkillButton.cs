@@ -15,10 +15,6 @@ public class TestSkillButton : MonoBehaviour
     }
 
     public void OnClick(){
-        if (isAdd) {
-            target.AddActiveEffect(skill);
-        } else {
-            target.ProcessEffect();
-        }
+
     }
 }
