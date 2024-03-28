@@ -6,6 +6,11 @@ TagManager:
   tags:
   - BlueTeamSpawn
   - RedTeamSpawn
+  - Window
+  - CharacterButton
+  - SelectedCharacterButton
+  - CharacterButtonContent
+  - AudioSource
   layers:
   - Default
   - TransparentFX

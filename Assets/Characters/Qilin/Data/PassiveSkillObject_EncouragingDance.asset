@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85cb5e5fdf4a1fa4db0d1915fd93c214, type: 3}
+  m_Name: PassiveSkillObject_EncouragingDance
+  m_EditorClassIdentifier: 
+  passiveSkill_EncouragingDance:
+    skillName: Encouraging Dance
+    description: Increases MR of an ally with the lowest HP by 25% of own MR, once
+      per battle.
+    isUsed: 0
+    magicalResistanceMultiplier: 0.25

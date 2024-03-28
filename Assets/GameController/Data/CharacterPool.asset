@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8785f39bd2ee35442885574c1622ad02, type: 3}
+  m_Name: CharacterPool
+  m_EditorClassIdentifier: 
+  characterInfos:
+  - {fileID: 11400000, guid: 785a767d9a1c78f4a9a5dfded87b7d4e, type: 2}
+  - {fileID: 11400000, guid: 98034d80c9fd24749985aaa858d06556, type: 2}
+  - {fileID: 11400000, guid: 4b4a4d885c976354fbf7fed5b70b89ed, type: 2}
+  - {fileID: 11400000, guid: 08a89ecde30c70842869bb2ab4766a09, type: 2}
+  - {fileID: 11400000, guid: f531e79b1de28af418fa0b50eb2c32d4, type: 2}
+  - {fileID: 11400000, guid: 443de3c019b95094491841b313b489d4, type: 2}
+  - {fileID: 11400000, guid: 135a05e370d7e564a9694b41f4bb6f5a, type: 2}
+  - {fileID: 11400000, guid: 1910efaa548e00e4fb61973d14eebe65, type: 2}

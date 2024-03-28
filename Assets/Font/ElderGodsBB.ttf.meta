@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6af3aa4701b1b6541a949e0f578c0835
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - ElderGods BB
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 35c0d14ae1497654992f047e6ee9e4fe, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
