@@ -120,6 +120,9 @@ public class CharacterActionController : MonoBehaviour
 
     public void ChangeCurrentHealthPoint(float amount){
         Debug.Log("Health amount change: " + amount, this);
+        GameObject damageTextObject = Instantiate(damageTextPrefab, this.transform.GetChild(0).GetChild(0).position + new Vector3(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f)),Quaternion.identity, this.transform.GetChild(0).GetChild(0));
+        damageTextObject.GetComponent<TMP_Text>().text = ((int)amount).ToString();
+        damageTextObject.GetComponent<TMP_Text>().color = Color.green;
         this.currentHealthPoint += amount;
         this.currentHealthPoint = Mathf.Min(this.data.healthPoint.Value, this.currentHealthPoint);
     }
@@ -190,6 +193,15 @@ public class CharacterActionController : MonoBehaviour
 
     public float GetCurrentHealth(){
         return this.currentHealthPoint;
+    }
+
+    public bool IsHavingThisEffect(Effect_Base effect){
+        foreach (Effect_Base effect_ in activeEffect){
+            if (effect.GetType() == effect_.GetType()){
+                return true;
+            }
+        }
+        return false;
     }
 
     public void ProcessPassiveSkill1(){
