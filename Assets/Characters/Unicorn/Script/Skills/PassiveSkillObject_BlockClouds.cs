@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PassiveSkillObject_BlockClouds : MonoBehaviour
+[CreateAssetMenu]
+public class PassiveSkillObject_BlockClouds : SkillObject_Base
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private PassiveSkill_BlockClouds passiveSkill_BlockClouds = new PassiveSkill_BlockClouds();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public override Skill_Base GetSkillInstance() => passiveSkill_BlockClouds.GetSkillInstance();
 }

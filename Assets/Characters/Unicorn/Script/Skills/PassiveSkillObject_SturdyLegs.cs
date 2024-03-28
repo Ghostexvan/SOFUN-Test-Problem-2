@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PassiveSkillObject_SturdyLegs : MonoBehaviour
+[CreateAssetMenu]
+public class PassiveSkillObject_SturdyLegs : SkillObject_Base
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private PassiveSkill_SturdyLegs passiveSkill_SturdyLegs = new PassiveSkill_SturdyLegs();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public override Skill_Base GetSkillInstance() => passiveSkill_SturdyLegs.GetSkillInstance();
 }

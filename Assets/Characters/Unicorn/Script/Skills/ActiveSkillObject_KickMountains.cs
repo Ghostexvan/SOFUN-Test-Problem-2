@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ActiveSkillObject_KickMountains : MonoBehaviour
+[CreateAssetMenu]
+public class ActiveSkillObject_KickMountains : SkillObject_Base
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private ActiveSkill_KickMountains activeSkill_KickMountains = new ActiveSkill_KickMountains();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public override Skill_Base GetSkillInstance() => activeSkill_KickMountains.GetSkillInstance();
 }
