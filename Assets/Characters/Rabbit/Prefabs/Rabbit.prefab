@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1076841833329535346
+--- !u!1 &243732856666165204
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3187742559734692174}
-  - component: {fileID: 9204237297403763506}
+  - component: {fileID: 5691247138005478410}
+  - component: {fileID: 6477947641022692553}
   m_Layer: 0
-  m_Name: MagicBall
+  m_Name: HealBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3187742559734692174
+--- !u!4 &5691247138005478410
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076841833329535346}
+  m_GameObject: {fileID: 243732856666165204}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7132267292681444129}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &9204237297403763506
+--- !u!212 &6477947641022692553
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076841833329535346}
+  m_GameObject: {fileID: 243732856666165204}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 21
-  m_Sprite: {fileID: 21300000, guid: d26bc3d3eb81ebe448421b0abe30dcf4, type: 3}
-  m_Color: {r: 0, g: 0.8095825, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8cb7b80fd96535f4e981ee0838dcd28d, type: 3}
+  m_Color: {r: 0, g: 1, b: 0.18364692, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.86, y: 1.88}
+  m_Size: {x: 0.83, y: 0.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 4641016088331852954}
   - component: {fileID: 2810164827296206141}
   m_Layer: 0
-  m_Name: Phoenix
+  m_Name: Rabbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -369,7 +369,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3648303641262778755}
-  - {fileID: 3187742559734692174}
+  - {fileID: 5691247138005478410}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -385,11 +385,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 185f084899b0bdc469eacabe5cebdfb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseData: {fileID: 11400000, guid: 3944c085bdf37874a841b5048d05cecc, type: 2}
-  normalSkillObject: {fileID: 11400000, guid: a471ad58c9a6acb4ca42fb9ed3d49319, type: 2}
-  passiveSkill1Object: {fileID: 11400000, guid: 432dbb186f799074ebdda41b4f637d53, type: 2}
-  passiveSkill2Object: {fileID: 11400000, guid: 877dc5398d26d5747b3f123f90ab7dc3, type: 2}
-  activeSkillObject: {fileID: 11400000, guid: 7469c45c4f88a39498043ffc8c1957e7, type: 2}
+  baseData: {fileID: 11400000, guid: 95a87292963fcbb48bf6a708844b6ee0, type: 2}
+  normalSkillObject: {fileID: 11400000, guid: 85cbcb0887655cd41a21edf6febb5e1b, type: 2}
+  passiveSkill1Object: {fileID: 11400000, guid: 90a84b5fc2aa4cd4ca8a72dcdef0a983, type: 2}
+  passiveSkill2Object: {fileID: 11400000, guid: b5a378d8f4fc5ac409ad311f695b87eb, type: 2}
+  activeSkillObject: {fileID: 11400000, guid: acd890d979c12d64b89b9a2adc5665fb, type: 2}
   damageTextPrefab: {fileID: 2212850523864622142, guid: 4d73af41d58553c4680a6ca4b5f4fddb, type: 3}
 --- !u!95 &2810164827296206141
 Animator:
@@ -401,7 +401,7 @@ Animator:
   m_GameObject: {fileID: 5528037005182317934}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1864f680f88b74d46a85440906bc987e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 88678c3f71ab20242b736060a6de9a82, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -485,7 +485,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 759e4065561f9624596505ca3a43c0d5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31c499a33b504c74d9ff14ec0b4da0fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
