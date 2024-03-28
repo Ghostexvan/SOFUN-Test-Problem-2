@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,10 +22,12 @@ public class CharacterActionController : MonoBehaviour
     [SerializeField]
     private SkillObject_Base activeSkillObject;
 
+    [SerializeField]
+    private GameObject damageTextPrefab;
+
     #endregion
 
     #region Private Fields
-    private Vector3 initialPosition; 
     private float currentHealthPoint;
     private int currentMana = 50;
     private List<Effect_Base> activeEffect = new List<Effect_Base>();
@@ -40,7 +43,6 @@ public class CharacterActionController : MonoBehaviour
 
     #region MonoBehaviour Callbacks
     private void Awake() {
-        initialPosition = this.transform.position;
         data = ScriptableObject.Instantiate(baseData);
         currentHealthPoint = this.data.healthPoint.Value;
         normalSkill = normalSkillObject.GetSkillInstance();
@@ -129,7 +131,10 @@ public class CharacterActionController : MonoBehaviour
             return false;
         } else {
             Debug.Log("Physical damage received: " + Mathf.Max((amount - data.physicalResistance.Value), 0), this);
-            this.currentHealthPoint -= Mathf.Max((amount - data.physicalResistance.Value), 0);
+            GameObject damageTextObject = Instantiate(damageTextPrefab, this.transform.GetChild(0).GetChild(0).position + new Vector3(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f)),Quaternion.identity, this.transform.GetChild(0).GetChild(0));
+            damageTextObject.GetComponent<TMP_Text>().text = ((int)Mathf.Max((amount - data.physicalResistance.Value), 0)).ToString();
+            damageTextObject.GetComponent<TMP_Text>().color = Color.yellow;
+            this.currentHealthPoint -= Mathf.Max((int)(amount - data.physicalResistance.Value), 0);
 
             if (currentHealthPoint <= 0){
                 GetComponent<Animator>().Play("Death");
@@ -147,7 +152,10 @@ public class CharacterActionController : MonoBehaviour
             return false;
         } else {
             Debug.Log("Magical damage received: " + Mathf.Max((amount - data.magicalResistance.Value), 0), this);
-            this.currentHealthPoint -= Mathf.Max((amount - data.magicalResistance.Value), 0);
+            GameObject damageTextObject = Instantiate(damageTextPrefab, this.transform.GetChild(0).GetChild(0).position + new Vector3(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f)),Quaternion.identity, this.transform.GetChild(0).GetChild(0));
+            damageTextObject.GetComponent<TMP_Text>().text = ((int)Mathf.Max((amount - data.magicalResistance.Value), 0)).ToString();
+            damageTextObject.GetComponent<TMP_Text>().color = Color.cyan;
+            this.currentHealthPoint -= Mathf.Max((int)(amount - data.magicalResistance.Value), 0);
 
             if (currentHealthPoint <= 0){
                 GetComponent<Animator>().Play("Death");

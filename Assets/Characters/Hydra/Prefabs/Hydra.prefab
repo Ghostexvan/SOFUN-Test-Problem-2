@@ -148,7 +148,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 21
   m_Sprite: {fileID: 21300000, guid: d26bc3d3eb81ebe448421b0abe30dcf4, type: 3}
   m_Color: {r: 0.5286393, g: 0, b: 1, a: 1}
   m_FlipX: 0
@@ -232,7 +232,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 21
   m_Sprite: {fileID: 21300000, guid: d26bc3d3eb81ebe448421b0abe30dcf4, type: 3}
   m_Color: {r: 0.5286393, g: 0, b: 1, a: 1}
   m_FlipX: 0
@@ -316,7 +316,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 21
   m_Sprite: {fileID: 21300000, guid: d26bc3d3eb81ebe448421b0abe30dcf4, type: 3}
   m_Color: {r: 0.5286393, g: 0, b: 1, a: 1}
   m_FlipX: 0
@@ -560,6 +560,7 @@ MonoBehaviour:
   passiveSkill1Object: {fileID: 11400000, guid: 844839d96d9c4c34eba86cbe35112df5, type: 2}
   passiveSkill2Object: {fileID: 11400000, guid: 557f2e35f498cbf48823772c5d78f359, type: 2}
   activeSkillObject: {fileID: 11400000, guid: 729f7348c2c727d45bea4aa1593209fd, type: 2}
+  damageTextPrefab: {fileID: 2212850523864622142, guid: 4d73af41d58553c4680a6ca4b5f4fddb, type: 3}
 --- !u!95 &2810164827296206141
 Animator:
   serializedVersion: 5

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c79220f142b444a8bcb8652eabb414, type: 3}
+  m_Name: PassiveSkillObject_GuidanceOfFire
+  m_EditorClassIdentifier: 
+  passiveSkill_GuidanceOfFire:
+    skillName: Guidance Of Fire
+    description: Increases MD by 30% once per battle when an alive ally has less
+      than 50% HP.
+    isUsed: 0
+    magicalDamageMultiplier: 0.3

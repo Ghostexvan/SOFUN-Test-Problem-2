@@ -54,7 +54,7 @@ public class ActiveSkill_DirtyPlaying : Skill_Base
     public override void ProcessSkill(CharacterActionController caster, List<CharacterActionController> targetList)
     {
         foreach(CharacterActionController target in targetList){
-            if (target.DealPhysicalDamage(caster.GetCharacterData().magicalDamage.Value * magicalDamageMultiplier, caster.GetCharacterData().moveSpeed.Value)){
+            if (target.DealMagicalDamage(caster.GetCharacterData().magicalDamage.Value * magicalDamageMultiplier, caster.GetCharacterData().moveSpeed.Value)){
                 foreach(EffectObject_Base effect in effectList){
                     target.AddActiveEffect(effect.GetEffectInstance());
                 }

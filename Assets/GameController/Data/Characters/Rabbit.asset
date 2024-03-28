@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697e1b50973089a41b335d0fd2ce9863, type: 3}
+  m_Name: Rabbit
+  m_EditorClassIdentifier: 
+  characterSprite: {fileID: 21300000, guid: 31c499a33b504c74d9ff14ec0b4da0fc, type: 3}
+  characterPrefab: {fileID: 5528037005182317934, guid: e106b23ef9509fb4d93cd9aa2c845222, type: 3}
+  skillInfos:
+  - skillName: Full Vigilance
+    skillDescription: Inflicts HASTE effect on self when own HP is below 50%.
+  - skillName: Here Comes The Aid
+    skillDescription: Heal an ally with lowest HP by 25% own HP when currently having
+      HASTE effect.
+  - skillName: We Can Make IT
+    skillDescription: Heal all allies by 25% own HP and inflicts HASTE effect.

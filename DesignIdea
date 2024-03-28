@@ -8,7 +8,7 @@
 		Cooldown: None.
 		Cost: None.
 	- Active: Wrath of Fire
-		Description: Deals 150% PD to the enemy target with the lowest health, applying BURN effect to that target.
+		Description: Deals 150% PD to the enemy target with the lowest health, inflicts BURN effect to that target.
 		Cooldown: None.
 		Cost: 100 MP.
 			BURN effect: Deals 5% target's HP.
@@ -38,7 +38,7 @@
 		Cooldown: Int.MaxValue turns.
 		Cost: None.
 	- Passive 2: Guidance Of Fire
-		Description: Increases MD by 30% when an ally has less than 50% HP.
+		Description: Increases MD by 30% once per battle when an alive ally has less than 50% HP.
 		Cooldown: 3 turns.
 		Cost: None.
 	- Active: Talented Strategist
@@ -52,12 +52,75 @@
 		Cooldown: 2 turns.
 		Cost: None.
 	- Passive 2: Celebrate Together
-		Description: 
-
+		Description: Gives all allies CHEER effect when own HP is below 30%.
+		Cooldown: 3 turns.
+		Cost: None.
+			CHEER effect: Increase MD by 25%.
+			Duration: 2 turns.
+			Stackable: Yes.
+	- Active: Majestic Beast
+		Description: Inflicts FEAR effect on all enemies.
+		Cooldown: None.
+		Cost: 100 MP.
+			FEAR effect: Decrease MV by 50%.
+			Duration: 2 turns.
+			Stackable: Yes.
+			
 5. Rabbit
+	- Passive 1: Full Vigilance
+		Description: Inflicts HASTE effect on self when own HP is below 50%.
+		Cooldown: 2 turns.
+		Cost: None.
+			HASTE effect: Increase MV by 75%.
+			Duration: 1 turn.
+			Stackable: Yes.
+	- Passive 2: Here Comes The Aid
+		Description: Heal an ally with lowest HP by 25% own HP when currently having HASTE effect.
+		Cooldown: 1 turn.
+		Cost: None.
+	- Active: We Can Make IT
+		Description: Heal all allies by 25% own HP and inflicts HASTE effect.
+		Cooldown: None.
+		Cost: 100MP.
 
 6. Unicorn
+	- Passive 1: Sturdy Legs
+		Description: Increase PR by 25% when HP is above 50%.
+		Cooldown: None.
+		Cost: None.
+	- Passive 2: Block Clouds
+		Description: Inflicts FEAR effect to a random enemy.
+		Cooldown: 3 turns.
+		Cost: None.
+	- Active: Kick Mountains
+		Description: Deals 300% PR as PD to an enemy with highest HP.
+		Cooldown: None.
+		Cost: 100 MP.
 
 7. Wolf
-
+	- Passive 1: Hiding And Waiting
+		Description: Deals 100% PD to an enemy currently having FEAR effect.
+		Cooldown: 2 turns.
+		Cost: None.
+	- Passive 2: Slash And Threats
+		Description: Lost 5% HP and inflicts FEAR effect on a random enemy.
+		Cooldown: 3 turns.
+		Cost: 5% HP.
+	- Active: Predator Eyes
+		Description: Deals 150% PD to an enemy with lowest HP and heals by 50% damage.
+		Cooldown: None.
+		Cost: 100 MP, 10% HP.
+		
 8. Wyvern
+	- Passive 1: Wishing Luck
+		Description: Heals an ally with lower than 10% HP by 50% own HP.
+		Cooldown: 3 turns.
+		Cost: None.
+	- Passive 2: No More Kindness
+		Description: Deals 75% HP as PD to an enemy with highest PD when below 30% HP.
+		Cooldown: 3 turns.
+		Cost: None.
+	- Active: Abundant Crops
+		Description: Heals all allies by 150% MD.
+		Cooldown: None.
+		Cost: 100 MP.
