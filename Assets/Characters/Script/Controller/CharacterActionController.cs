@@ -128,8 +128,8 @@ public class CharacterActionController : MonoBehaviour
             GetComponent<Animator>().Play("Dodged");
             return false;
         } else {
-            Debug.Log("Received: " + (amount - data.physicalResistance.Value), this);
-            this.currentHealthPoint -= (amount - data.physicalResistance.Value);
+            Debug.Log("Physical damage received: " + Mathf.Max((amount - data.physicalResistance.Value), 0), this);
+            this.currentHealthPoint -= Mathf.Max((amount - data.physicalResistance.Value), 0);
 
             if (currentHealthPoint <= 0){
                 GetComponent<Animator>().Play("Death");
@@ -146,8 +146,8 @@ public class CharacterActionController : MonoBehaviour
             GetComponent<Animator>().Play("Dodged");
             return false;
         } else {
-            Debug.Log("Received: " + (amount - data.magicalResistance.Value), this);
-            this.currentHealthPoint -= (amount - data.magicalResistance.Value);
+            Debug.Log("Magical damage received: " + Mathf.Max((amount - data.magicalResistance.Value), 0), this);
+            this.currentHealthPoint -= Mathf.Max((amount - data.magicalResistance.Value), 0);
 
             if (currentHealthPoint <= 0){
                 GetComponent<Animator>().Play("Death");
@@ -164,14 +164,16 @@ public class CharacterActionController : MonoBehaviour
         this.currentMana = Mathf.Min(100, this.currentMana);
     }
 
-    public void AddActiveEffect(Effect_Base skill){
-        Effect_Base skillInstance = skill.GetEffectInstance();
-        activeEffect.Add(skillInstance);
+    public void AddActiveEffect(Effect_Base effect){
+        Effect_Base effectInstance = effect.GetEffectInstance();
+        activeEffect.Add(effectInstance);
+        Debug.Log("Got effect: " + effect.GetType().Name, this);
     }
 
-    public void AddActiveEffect(EffectObject_Base skillObject){
-        Effect_Base skillInstance = skillObject.GetEffectInstance();
-        activeEffect.Add(skillInstance);
+    public void AddActiveEffect(EffectObject_Base effectObject){
+        Effect_Base effectInstance = effectObject.GetEffectInstance();
+        activeEffect.Add(effectInstance);
+        Debug.Log("Got effect: " + effectObject.name, this);
     }
 
     public int GetCurrentMana(){
@@ -199,9 +201,10 @@ public class CharacterActionController : MonoBehaviour
     }
 
     public void FinishPassiveSkill1(){
+        // Debug.Log("Finish Passive 1");
         if (passiveSkill2.CheckCondition(this)){
             Debug.Log("Passive Skill 2");
-            passiveSkill2.ProcessSkill(this, passiveSkill2.GetTargetList(this));
+            GetComponent<Animator>().Play("Passive2");
             return;
         }
 
@@ -219,6 +222,7 @@ public class CharacterActionController : MonoBehaviour
     }
 
     public void FinishPassiveSkill2(){
+        // Debug.Log("Finish Passive 2");
         if (activeSkill.CheckCondition(this)){
             Debug.Log("Active Skill");
             GetComponent<Animator>().Play("Active");

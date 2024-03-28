@@ -23,7 +23,7 @@ public class Effect_Burn : Effect_Base
         this.turnPassed = effect_Burn.turnPassed;
     }
 
-    public override Effect_Base GetEffectInstance()
+    public override Effect_Base GetEffectInstance(CharacterActionController caster = null)
     {
         return new Effect_Burn(this);
     }

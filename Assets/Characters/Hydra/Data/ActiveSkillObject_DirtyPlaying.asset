@@ -9,14 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33048e336efb260409aa306eeeb5e42b, type: 3}
-  m_Name: NormalSkillObject_Tackle
+  m_Script: {fileID: 11500000, guid: 5f8f488ddcf46244393344c780186979, type: 3}
+  m_Name: ActiveSkillObject_DirtyPlaying
   m_EditorClassIdentifier: 
-  normalSkill_Tackle:
-    skillName: Tackle
-    description: Deals minor PD to the target.
-    getLowestHP: 0
-    getLowestPR: 0
-    getLowestMR: 0
-    physicalDamage: 1
+  activeSkill_DirtyPlaying:
+    skillName: Dirty Playing
+    description: Deals 75% MD to all enemies.
+    magicalDamageMultiplier: 0.75
     effectList: []

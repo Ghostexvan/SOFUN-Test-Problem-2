@@ -21,7 +21,7 @@ public class Effect_HealOverTime : Effect_Base {
         healAmount = hot.healAmount;
     }
 
-    public override Effect_Base GetEffectInstance(){
+    public override Effect_Base GetEffectInstance(CharacterActionController caster = null){
         return new Effect_HealOverTime(this);
     }
 

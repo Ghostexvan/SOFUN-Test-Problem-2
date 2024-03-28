@@ -1248,7 +1248,7 @@ MonoBehaviour:
   currentTurn: 0
   currentCharacterTurnIndex: -1
   characterTransfom: {fileID: 1534925787}
-  testPrefab: {fileID: 5528037005182317934, guid: b990215294b23d9439866deaf5785344, type: 3}
+  testPrefab: {fileID: 5528037005182317934, guid: bb615f4d14628e94b81a801780a319a4, type: 3}
   teamList:
     blueTeamList: []
     redTeamList: []
