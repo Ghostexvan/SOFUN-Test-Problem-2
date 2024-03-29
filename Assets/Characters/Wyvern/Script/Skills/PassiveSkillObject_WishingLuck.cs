@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PassiveSkillObject_WishingLuck : MonoBehaviour
+[CreateAssetMenu]
+public class PassiveSkillObject_WishingLuck : SkillObject_Base
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private PassiveSkill_WishingLuck passiveSkill_WishingLuck = new PassiveSkill_WishingLuck();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public override Skill_Base GetSkillInstance() => passiveSkill_WishingLuck.GetSkillInstance();
 }

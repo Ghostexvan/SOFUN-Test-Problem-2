@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PassiveSkillObject_HidingAndWaiting : MonoBehaviour
+[CreateAssetMenu]
+public class PassiveSkillObject_HidingAndWaiting : SkillObject_Base
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private PassiveSkill_HidingAndWaiting passiveSkill_HidingAndWaiting = new PassiveSkill_HidingAndWaiting();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public override Skill_Base GetSkillInstance() => passiveSkill_HidingAndWaiting.GetSkillInstance();
 }

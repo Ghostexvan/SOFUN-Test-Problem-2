@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PassiveSkillObject_NoMoreKindness : MonoBehaviour
+[CreateAssetMenu]
+public class PassiveSkillObject_NoMoreKindness : SkillObject_Base
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private PassiveSkill_NoMoreKindness passiveSkill_NoMoreKindness = new PassiveSkill_NoMoreKindness();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public override Skill_Base GetSkillInstance() => passiveSkill_NoMoreKindness.GetSkillInstance();
 }

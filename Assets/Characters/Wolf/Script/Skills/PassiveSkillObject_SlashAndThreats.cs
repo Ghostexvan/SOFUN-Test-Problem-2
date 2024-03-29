@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PassiveSkillObject_SlashAndThreats : MonoBehaviour
+[CreateAssetMenu]
+public class PassiveSkillObject_SlashAndThreats : SkillObject_Base
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private PassiveSkill_SlashAndThreats passiveSkill_SlashAndThreats = new PassiveSkill_SlashAndThreats();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public override Skill_Base GetSkillInstance() => passiveSkill_SlashAndThreats.GetSkillInstance();
 }

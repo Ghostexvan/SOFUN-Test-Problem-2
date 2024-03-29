@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02aebf6367e0c841878ee4b1a70939a, type: 3}
+  m_Name: ActiveSkill_AbundantCrops
+  m_EditorClassIdentifier: 
+  activeSkill_AbundantCrops:
+    skillName: Abundant Crops
+    description: Heals all allies by 150% MD.
+    magicalDamageMultiplier: 1.5
