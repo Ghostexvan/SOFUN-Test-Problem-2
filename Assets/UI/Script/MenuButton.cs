@@ -9,6 +9,7 @@ public class MenuButton : MonoBehaviour
     }
 
     public void OnClick(){
+        Time.timeScale = 1f;
         SceneManager.LoadSceneAsync("LauncherScene");
     }
 }
