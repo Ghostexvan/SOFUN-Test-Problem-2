@@ -85,23 +85,23 @@ public class CharacterActionController : MonoBehaviour
 
     public void ProcessSkill(){
         if (passiveSkill1.CheckCondition(this)){
-            Debug.Log("Passive Skill 1");
+            Debug.Log("Passive Skill 1", this);
             GetComponent<Animator>().Play("Passive1");
             return;
         }
 
         if (passiveSkill2.CheckCondition(this)){
-            Debug.Log("Passive Skill 2");
+            Debug.Log("Passive Skill 2", this);
             GetComponent<Animator>().Play("Passive2");
             return;
         }
 
         if (activeSkill.CheckCondition(this)){
-            Debug.Log("Active Skill");
+            Debug.Log("Active Skill", this);
             GetComponent<Animator>().Play("Active");
         }
         else if (normalSkill.CheckCondition(this)){
-            Debug.Log("Normal Skill");
+            Debug.Log("Normal Skill", this);
             // normalSkill.ProcessSkill(this, normalSkill.GetTargetList(this));
             GetComponent<Animator>().Play("Normal");
         } else {
@@ -118,11 +118,17 @@ public class CharacterActionController : MonoBehaviour
         return this.data;
     }
 
-    public void ChangeCurrentHealthPoint(float amount){
+    public void ChangeCurrentHealthPoint(float amount, bool selfInflicts = false){
         Debug.Log("Health amount change: " + amount, this);
         GameObject damageTextObject = Instantiate(damageTextPrefab, this.transform.GetChild(0).GetChild(0).position + new Vector3(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f)),Quaternion.identity, this.transform.GetChild(0).GetChild(0));
-        damageTextObject.GetComponent<TMP_Text>().text = ((int)amount).ToString();
-        damageTextObject.GetComponent<TMP_Text>().color = Color.green;
+        damageTextObject.GetComponent<TMP_Text>().text = Mathf.Abs(((int)amount)).ToString();
+
+        if (!selfInflicts){
+            damageTextObject.GetComponent<TMP_Text>().color = Color.green;
+        } else {
+            damageTextObject.GetComponent<TMP_Text>().color = Color.red;
+        }
+        
         this.currentHealthPoint += amount;
         this.currentHealthPoint = Mathf.Min(this.data.healthPoint.Value, this.currentHealthPoint);
     }
@@ -221,19 +227,19 @@ public class CharacterActionController : MonoBehaviour
     }
 
     public void FinishPassiveSkill1(){
-        // Debug.Log("Finish Passive 1");
+        Debug.Log("Finish Passive 1");
         if (passiveSkill2.CheckCondition(this)){
-            Debug.Log("Passive Skill 2");
+            Debug.Log("Passive Skill 2", this);
             GetComponent<Animator>().Play("Passive2");
             return;
         }
 
         if (activeSkill.CheckCondition(this)){
-            Debug.Log("Active Skill");
+            Debug.Log("Active Skill", this);
             GetComponent<Animator>().Play("Active");
         }
         else if (normalSkill.CheckCondition(this)){
-            Debug.Log("Normal Skill");
+            Debug.Log("Normal Skill", this);
             // normalSkill.ProcessSkill(this, normalSkill.GetTargetList(this));
             GetComponent<Animator>().Play("Normal");
         } else {
@@ -242,13 +248,13 @@ public class CharacterActionController : MonoBehaviour
     }
 
     public void FinishPassiveSkill2(){
-        // Debug.Log("Finish Passive 2");
+        Debug.Log("Finish Passive 2");
         if (activeSkill.CheckCondition(this)){
-            Debug.Log("Active Skill");
+            Debug.Log("Active Skill", this);
             GetComponent<Animator>().Play("Active");
         }
         else if (normalSkill.CheckCondition(this)){
-            Debug.Log("Normal Skill");
+            Debug.Log("Normal Skill", this);
             // normalSkill.ProcessSkill(this, normalSkill.GetTargetList(this));
             GetComponent<Animator>().Play("Normal");
         } else {

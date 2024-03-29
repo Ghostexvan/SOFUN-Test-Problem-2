@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +10,7 @@ public class LauncherController : MonoBehaviour
     
     private void Awake() {
         windowList = GameObject.FindGameObjectsWithTag("Window").ToList();
+        windowList.Sort(SortByName);
         OpenWindow(0);      
     }
 
@@ -50,5 +49,12 @@ public class LauncherController : MonoBehaviour
 
     public void QuitGame(){
         Application.Quit();
+    }
+
+    static int SortByName(GameObject window1, GameObject window2)
+    {
+        return window1.name.CompareTo(
+            window2.name
+        );
     }
 }

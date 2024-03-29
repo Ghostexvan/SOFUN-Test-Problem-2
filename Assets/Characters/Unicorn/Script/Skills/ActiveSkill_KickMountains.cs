@@ -38,8 +38,19 @@ public class ActiveSkill_KickMountains : Skill_Base
     {
         List<GameObject> enemies = GameController.Instance.GetEnemiesTeam(caster.gameObject);
 
+        GameObject target = enemies[0];
+
+        foreach (GameObject enemy in enemies){
+            CharacterActionController controller = enemy.GetComponent<CharacterActionController>();
+            CharacterActionController targetController = target.GetComponent<CharacterActionController>();
+
+            if (targetController.GetCharacterData().healthPoint.Value < controller.GetCharacterData().healthPoint.Value){
+                target = enemy;
+            }
+        }
+
         return new List<CharacterActionController>(){
-            enemies[UnityEngine.Random.Range(0, enemies.Count)].GetComponent<CharacterActionController>()
+            target.GetComponent<CharacterActionController>()
         };
     }
 

@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ActiveSkillObject_PredatorEyes : MonoBehaviour
+[CreateAssetMenu]
+public class ActiveSkillObject_PredatorEyes : SkillObject_Base
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private ActiveSkill_PredatorEyes activeSkill_PredatorEyes = new ActiveSkill_PredatorEyes();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public override Skill_Base GetSkillInstance() => activeSkill_PredatorEyes.GetSkillInstance();
 }

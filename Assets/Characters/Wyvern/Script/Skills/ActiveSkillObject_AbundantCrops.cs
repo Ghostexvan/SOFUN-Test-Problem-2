@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ActiveSkillObject_AbundantCrops : MonoBehaviour
+[CreateAssetMenu]
+public class ActiveSkillObject_AbundantCrops : SkillObject_Base
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private ActiveSkill_AbundantCrops activeSkill_AbundantCrops = new ActiveSkill_AbundantCrops();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public override Skill_Base GetSkillInstance() => activeSkill_AbundantCrops.GetSkillInstance();
 }
