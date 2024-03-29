@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PlayerTeam
   m_EditorClassIdentifier: 
   characterInfos:
-  - {fileID: 11400000, guid: f531e79b1de28af418fa0b50eb2c32d4, type: 2}
-  - {fileID: 11400000, guid: 4b4a4d885c976354fbf7fed5b70b89ed, type: 2}
-  - {fileID: 11400000, guid: 4b4a4d885c976354fbf7fed5b70b89ed, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
