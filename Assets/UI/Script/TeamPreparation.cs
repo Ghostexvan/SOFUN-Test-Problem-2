@@ -34,6 +34,7 @@ public class TeamPreparation : MonoBehaviour
         }
 
         selectedCharacterButtons = GameObject.FindGameObjectsWithTag("SelectedCharacterButton").ToList();
+        selectedCharacterButtons.Sort(SortByName);
         for (int index = 0; index < selectedCharacterButtons.Count; index++)
         {
             selectedCharacterButtons[index].GetComponent<SelectedCharacterButton>().SetButtonIndex(index);
@@ -128,5 +129,12 @@ public class TeamPreparation : MonoBehaviour
     private void OnEnable()
     {
         DisplayTeamMember();
+    }
+
+    static int SortByName(GameObject window1, GameObject window2)
+    {
+        return window1.name.CompareTo(
+            window2.name
+        );
     }
 }
